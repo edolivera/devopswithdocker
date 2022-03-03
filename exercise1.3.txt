@@ -1,0 +1,12 @@
+Commands
+Running the specified container and naming it: 
+docker run -d --rm -it --name secret devopsdockeruh/simple-web-service:ubuntu
+
+From another terminal
+docker start secret
+docker attach --no-stdin secret
+docker exec -it secret bash
+
+At the bash:
+tail -f ./text.log 
+Secret message is: ‘You can find the source code here: https://github.com/docker-hy’
