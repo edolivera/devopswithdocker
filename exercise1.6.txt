@@ -1,0 +1,8 @@
+Exercise 1.6  
+Commands
+docker run -it devopsdockeruh/pull_exercise
+docker search devopsdockeruh/pull_exercise (poor information here)
+
+But searching at: https://hub.docker.com/r/devopsdockeruh/pull_exercise
+I found that the secret is: basics 
+and the secret message is:  “This is the secret message”
