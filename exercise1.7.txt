@@ -1,0 +1,8 @@
+Exercise 1.7: Two line Dockerfile
+At the Dockerfile
+FROM devopsdockeruh/simple-web-service:alpine
+CMD server
+
+At the prompt
+docker build . -t web-server
+docker run web-server
