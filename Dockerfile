@@ -1,12 +1,14 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
-WORKDIR /usr/src/app
+WORKDIR /mydir
 
-COPY exercise1.8_script.sh .	
+RUN apt-get update && apt-get install -y curl python
+RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+RUN chmod a+x /usr/local/bin/youtube-dl
 
-#Installing curl
-RUN apt-get update
-RUN apt-get install -y curl
+COPY script.txt .
 
-CMD ./exercise1.8_script.sh 
+ENV LC_ALL=C.UTF-8
 
+# Replacing CMD with ENTRYPOINT
+ENTRYPOINT ["./script.txt"]
